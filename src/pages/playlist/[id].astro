@@ -2,7 +2,7 @@
 import MusicsTable from "@/components/MusicsTable.astro"
 import Layout from "../../layouts/Layout.astro"
 import { allPlaylists, songs } from "../../Lib/data"
-
+import { CardPlayButton } from "@/components/CardPlayButton"
 const { id } = Astro.params
 
 const playlist = allPlaylists.find((playlist) => playlist.id === id)
@@ -26,7 +26,6 @@ const playListSongs = songs.filter((song) => song.albumId === playlist?.albumId)
           transition:name=`playlist ${playlist?.id} image`
         />
       </picture>
-
       <div class="flex flex-col justify-between">
         <h2 class="flex flex-1 items-end">Playlist</h2>
         <div>
@@ -35,16 +34,26 @@ const playListSongs = songs.filter((song) => song.albumId === playlist?.albumId)
             <span transition:name=`playlist ${playlist?.id} title`></span>
           </h1>
         </div>
-
-        <div class="flex-1 flex items-end">
-          <div class="text-sm text-gray-300 font-normal">
-            <div transition:name=`playlist ${playlist?.id} artists`>
-              <span>{playlist?.artists.join(", ")}</span>
-            </div>
-            <p class="mt-1">
-              <span class="text-white">{playListSongs.length} canciones</span>,
-              3 h aproximadamente
-            </p>
+        <div
+        class=`absolute right-4 bottom-20 translate-y-4
+        transition-all duration-500 opacity-0
+        group-hover:translate-y-0 group-hover:opacity-100
+        z-10
+      `
+      >
+    </div>
+    
+    
+    <div class="flex-1 flex items-end">
+      <div class="text-sm text-gray-300 font-normal">
+        <div transition:name=`playlist ${playlist?.id} artists`>
+          <span>{playlist?.artists.join(", ")}</span>
+        </div>
+        <p class="mt-1">
+          <span class="text-white">{playListSongs.length} canciones</span>,
+          3 h aproximadamente
+        </p>
+        <CardPlayButton id={id} client:visible />
           </div>
         </div>
       </div>

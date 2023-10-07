@@ -26,12 +26,12 @@ const CurrentSong = ({ image, title, artists }) => {
         flex items-center gap-5 relative
         overflow-hidden
       `}>
-        <picture className="w-16 h-16 bg-zinc-800 rounded-md shadow-lg overflow-hidden">
-          <img src={image} alt={title} />
+        <picture className="w-[5rem]  h-[5rem] m-3 bg-zinc-800 rounded-md shadow-lg overflow-hidden">
+          <img src={image} alt={title} className="w-full h-full object-cover"/>
         </picture>
 
-        <div className="flex flex-col text-white">
-          <h3 className="font-semibold text-sm block">
+        <div className="flex flex-col text-white w-20">
+          <h3 className="font-semibold text-sm block w-20">
             {title}
           </h3>
           <span className="text-xs opacity-80">
