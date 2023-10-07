@@ -4,9 +4,9 @@
 
   let greeting = ""
 
-  if (currentHour < 12) {
+  if (currentHour < 5) {
     greeting = "Buenos días🌤️"
-  } else if (currentHour < 18) {
+  } else if (currentHour < 22) {
     greeting = "Buenas tardes🌄"
   } else {
     greeting = "Buenas noches🌙"
