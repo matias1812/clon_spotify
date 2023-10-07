@@ -1,4 +1,4 @@
-import { allPlaylists, songs as allSongs } from "../lib/data";
+import { allPlaylists, songs as allSongs } from "../../Lib/data";
 
 export async function GET({ params, request }) {
   // get the id from the url search params
