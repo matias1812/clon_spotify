@@ -53,13 +53,12 @@ const playListSongs = songs.filter((song) => song.albumId === playlist?.albumId)
           <span class="text-white">{playListSongs.length} canciones</span>,
           3 h aproximadamente
         </p>
-        <CardPlayButton id={id} client:visible />
-          </div>
-        </div>
       </div>
-    </header>
-
-    <div class="pl-6 pt-6">
+    </div>
+  </div>
+</header>
+<div class="pl-6 pt-6">
+      <CardPlayButton id={id} client:load size="large" />
     </div>
 
     <div class="relative z-10 px-6 pt-10"></div>

@@ -189,7 +189,7 @@ export const songs: Song[] = [
     "title": "FERXXO 30",
     "image": `https://i.scdn.co/image/ab67616d000048511e76d5d8c654a8f5e640392b`,
     "artists": ["Feid"],
-    "album": "Mor, NO Le Temas a La Oscuridad",
+    "album": "MOR, No Le Temas a La Oscuridad",
     "duration": "3:40"
   },
   {
