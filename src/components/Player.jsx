@@ -27,12 +27,12 @@ const CurrentSong = ({ image, title, artists }) => {
         overflow-hidden
         w-80
       `}>
-        <picture className="w-[5rem]  h-[5rem] m-3 bg-zinc-800 rounded-md shadow-lg overflow-hidden">
+        <picture className="flex flex row w-[4rem] h-[4rem] m-3 bg-zinc-800 rounded-md shadow-lg overflow-hidden">
           <img src={image} alt={title} className="w-full h-full object-cover"/>
         </picture>
 
-        <div className="flex flex-col text-white w-40">
-          <h3 className="font-semibold text-sm block w-20">
+        <div className="flex flex-col text-white">
+          <h3 className="font-semibold text-sm block ">
             {title}
           </h3>
           <span className="text-xs opacity-80">
@@ -121,7 +121,7 @@ const VolumeControl = () => {
         max={100}
         min={0}
         value={[volume * 100]}
-        className="w-[95px]"
+        className="w-[120px]"
         onValueChange={(value) => {
           const [newVolume] = value
           const volumeValue = newVolume / 100
